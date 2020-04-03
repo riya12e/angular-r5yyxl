@@ -11,13 +11,19 @@ export class AppComponent {
   public prodCost:number;
   public prodOnline:string;
   public prodCategory:string;
+  public msg:string;
 
   
  category:string[]=['Grocery','Mobile','Electronics','Cloths'];
- 
+ stores:string[]=['Big Bazar','DMart','Reliance','Mega Store'];
+  
+  check(event){
+    console.log(event.target.value);
+  }
 
  saveForm(prodForm){
-   console.log("Product Form Data="+prodForm.value);
+   console.log(prodForm.value);
+   this.msg='Successfully Submitted';
  }
 
 
